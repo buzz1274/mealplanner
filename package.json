@@ -1,0 +1,22 @@
+{
+  "name": "mealplanner.zz50.co.uk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buzz1274/mealplanner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buzz1274/mealplanner/issues"
+  },
+  "homepage": "https://github.com/buzz1274/mealplanner#readme",
+  "devDependencies": {
+    "webpack": "^1.12.3"
+  }
+}
