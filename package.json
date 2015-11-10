@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/buzz1274/mealplanner#readme",
   "devDependencies": {
-    "webpack": "^1.12.3"
+    "html-webpack-plugin": "^1.6.2",
+    "webpack": "^1.12.3",
+    "webpack-dev-server": "^1.12.1"
   }
 }
