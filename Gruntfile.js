@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         },
         watch: {
             app: {
-                files: ["app/**/*{.js,.css,.handlebars,.jsx}"],
+                files: ["app/**/*{.js,.css,.less,.jsx}"],
                 tasks: ["webpack:build_dev"],
                 options: {
                     spawn: false

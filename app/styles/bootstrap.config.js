@@ -5,5 +5,8 @@ module.exports = {
   },  
   styles: {
   	'normalize': true,
+  	'tables': true,
+  	'mixins': true,
+  	"scaffolding": true,
   }
 };

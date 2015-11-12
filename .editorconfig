@@ -24,6 +24,12 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 2
 
+[*.jsx]
+charset = utf-8
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
 [*.css]
 charset = utf-8
 trim_trailing_whitespace = true

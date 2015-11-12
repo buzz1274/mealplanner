@@ -31,6 +31,10 @@ module.exports = {
 				loader: 'url-loader'
 			},
 			{
+				test: /\.less$/,
+				loader: ExtractTextPlugin.extract("style-loader", "less-loader")
+			},			
+			{
 				test: /\.css$/,
 				loader: ExtractTextPlugin.extract("style-loader", "css-loader")
 			},

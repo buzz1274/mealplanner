@@ -1,4 +1,4 @@
-import 'bootstrap-webpack!./styles/bootstrap.config.less!./styles/bootstrap.config.js';
+import 'bootstrap-webpack!./styles/bootstrap.config.js';
 import './styles/main.css';
 
 import React from 'react';
