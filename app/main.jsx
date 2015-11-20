@@ -1,3 +1,4 @@
+/*
 import 'bootstrap-webpack!./styles/bootstrap.config.js';
 import './styles/main.css';
 
@@ -9,6 +10,7 @@ main();
 function main() {
 	const app = document.createElement('div');
 
-	document.body.appendChild(app);
+	//$('#main').html(app);
 	//React.render(<App />, app);
 }
+*/

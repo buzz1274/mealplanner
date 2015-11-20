@@ -8,5 +8,6 @@ module.exports = {
   	'tables': true,
   	'mixins': true,
   	"scaffolding": true,
+    "grid": true,
   }
 };
