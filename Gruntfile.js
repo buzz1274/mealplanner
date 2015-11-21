@@ -30,7 +30,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask("server", ["webpack:build_dev", "webpack-dev-server"]);
   grunt.registerTask("dev", ["webpack:build_dev", "watch:app"]);
   grunt.registerTask("build", ["webpack:build"]);
 

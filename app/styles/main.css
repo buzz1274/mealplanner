@@ -5,7 +5,7 @@ body {
 }
 h1 {
 	margin:0;
-	padding:15px;
+	padding:0;
 }
 #content {
 	width:90%;
@@ -13,6 +13,7 @@ h1 {
 	border:1px solid #000;
 	margin-top:10px;
 	min-height:500px;
+  padding:0px;
 }
 #header {
 	background-color:#000;
