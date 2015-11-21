@@ -7,7 +7,7 @@ import App from './app.jsx';
 main();
 
 function main() {
-  const app = document.createElement('div');
+  var app = document.createElement('div');
 
   $('#main').html(app);
   React.render(<App />, app);
