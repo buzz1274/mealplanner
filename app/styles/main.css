@@ -50,14 +50,28 @@ h1 {
 }
 .calendar_day {
   width:14.285714285714285714285714285714%;
-  height:19%;
   padding:2px;
   margin:0;
+}
+.calendar_day_day {
+  height:18%;
 }
 .calendar_day .inner {
   border:1px solid #000;
   height:100%;
   padding:2px 2px 2px 4px;
+}
+.calendar_day .day_of_week {
+  text-align:center;
+  height:25px;
+  background-color:#d3d3d3;
+  font-weight:bold;
+}
+.page_prev {
+  padding-right:20px;
+}
+.page_next {
+  padding-left:20px;
 }
 .header {
   background-color:#000;
