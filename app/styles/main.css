@@ -29,6 +29,7 @@ h1 {
 }
 #main {
   padding:5px;
+  margin-bottom:5px;
   min-height:500px;
 }
 #footer {
@@ -67,11 +68,16 @@ h1 {
   background-color:#d3d3d3;
   font-weight:bold;
 }
+.calendar_day .selected {
+  background-color:sandybrown;
+}
 .page_prev {
   padding-right:20px;
+  cursor:pointer;
 }
 .page_next {
   padding-left:20px;
+  cursor:pointer;
 }
 .header {
   background-color:#000;
