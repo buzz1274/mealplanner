@@ -70,6 +70,7 @@ h1 {
 }
 .calendar_day .selected {
   background-color:sandybrown;
+  font-weight:bold;
 }
 .page_prev {
   padding-right:20px;
