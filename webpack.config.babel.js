@@ -22,8 +22,12 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
-        loaders: ['babel'],
-        include: APP_PATH
+        loader: 'babel',
+        include: APP_PATH,
+        query: {
+          cacheDirectory: true,
+          presets: ['es2015']
+        }
       },
       {
         test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
