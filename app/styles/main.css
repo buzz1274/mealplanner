@@ -94,3 +94,22 @@ h1 {
   width:50%;
   text-align:center;
 }
+div#home_text {
+  width:80%;
+  padding-top:50px;
+  margin:0 auto;
+  font-size:1.2em
+}
+div#home_text div#links {
+  margin-top:35px;
+  text-align:center;
+}
+div#home_text div#links span {
+  margin:0 10px
+}
+div#home_text div#links a {
+  color:#000;
+  text-decoration:none;
+  font-weight:700;
+  font-size:1.05em
+}

@@ -3,6 +3,7 @@ module.exports = {
     extract('style-loader', 'css-loader!postcss-loader!less-loader'),
   scripts: {
     'transition': true,
+    'button': true,
   },
   styles: {
     'normalize': true,
@@ -11,5 +12,7 @@ module.exports = {
     'navs': true,
     "scaffolding": true,
     "grid": true,
+    "buttons": true,
+    "typography": true,
   }
 };

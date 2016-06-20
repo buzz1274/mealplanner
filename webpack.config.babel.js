@@ -25,7 +25,7 @@ module.exports = {
         loader: 'babel',
         include: APP_PATH,
         query: {
-          cacheDirectory: true,
+          cacheDirectory: '/tmp/react_cache/',
           presets: ['es2015']
         }
       },
