@@ -1,6 +1,8 @@
 import React from 'react';
 import {render, ReactDom} from 'react-dom';
 import {Router, Route, Link, browserHistory} from 'react-router'
+
+import Header from './header.jsx';
 import Day from './day.jsx';
 import Calendar from './calendar.jsx';
 import Home from './home.jsx';
@@ -15,7 +17,6 @@ const App = React.createClass({
     return (<div id="app">
       <Calendar date_selected={today} />
       <Day date={today} />
-      <Link to="derp">Home</Link>
     </div>)
   }
 });
@@ -28,3 +29,5 @@ render((
       <Route path="planner" component={App}/>
     </Router>
   ), document.getElementById('main'))
+
+render((<Header />), document.getElementById('header'));
