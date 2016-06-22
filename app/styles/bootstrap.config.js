@@ -14,5 +14,6 @@ module.exports = {
     "grid": true,
     "buttons": true,
     "typography": true,
+    "forms": true
   }
 };

@@ -41,9 +41,9 @@ export default React.createClass({
     );
   },
   handleLoginClick() {
-    browserHistory.push('/login')
+    browserHistory.push('/login');
   },
   handleRegisterClick() {
-    browserHistory.push('/register')
+    browserHistory.push('/register');
   }
 });

@@ -7,6 +7,9 @@ h1 {
   margin:0;
   padding:0;
 }
+a {
+  cursor:pointer;
+}
 #content {
   width:90%;
   margin:10px auto;
@@ -26,6 +29,16 @@ h1 {
 }
 #header_content a:hover {
   text-decoration:none;
+}
+#welcome {
+  float:right;
+  padding:10px 20px 0 0;
+  font-weight:bold;
+  font-size:0.9em;
+}
+#welcome a {
+  color:#FFF;
+  text-decoration:underline;
 }
 #main {
   padding:5px;
@@ -112,4 +125,18 @@ div#home_text div#links a {
   text-decoration:none;
   font-weight:700;
   font-size:1.05em
+}
+div.form {
+  width: 50%;
+  margin: 0 auto;
+}
+div.form legend {
+  width: inherit;
+  padding: 0 10px;
+  border-bottom: none;
+  font-size: 1.15em;
+}
+div.form fieldset {
+  padding: 15px;
+  border: 1px solid #000;
 }
