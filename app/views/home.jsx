@@ -2,7 +2,7 @@ import React from 'react';
 import {browserHistory} from 'react-router';
 import Button from 'react-bootstrap/lib/Button';
 
-export default React.createClass({
+export default class Home extends React.Component{
   render() {
     return (
       <div id="home_text">
@@ -39,11 +39,11 @@ export default React.createClass({
       </div>
     </div>
     );
-  },
+  }
   handleLoginClick() {
     browserHistory.push('/login');
-  },
+  }
   handleRegisterClick() {
     browserHistory.push('/register');
   }
-});
+};
