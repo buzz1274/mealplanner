@@ -6,7 +6,7 @@ import Header from './header.jsx';
 import Day from './day.jsx';
 import Calendar from './calendar.jsx';
 import Home from './home.jsx';
-import Login from './login.jsx';
+import Login from './views/login.jsx';
 import Register from './register.jsx';
 import moment from 'moment';
 
