@@ -3,6 +3,7 @@ import Day from '../components/day.jsx';
 import Calendar from '../components/calendar.jsx';
 import moment from 'moment';
 
+var MonthStore = require('../stores/MonthStore');
 var today = moment().format('YYYY-MM-DD');
 
 export default class Planner extends React.Component {

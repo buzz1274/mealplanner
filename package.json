@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/buzz1274/mealplanner#readme",
   "devDependencies": {
+    "alt": "^0.18.4",
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-react-jsx": "^6.8.0",

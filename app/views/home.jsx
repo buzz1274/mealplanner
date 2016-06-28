@@ -27,23 +27,17 @@ export default class Home extends React.Component{
         </p>
         <div id="links" class="text-center">
           <span>
-            <Button onClick={this.handleLoginClick}>
+            <Button onClick={() => {browserHistory.push('/login')}}>
               Login
             </Button>
           </span>
           <span>
-            <Button onClick={this.handleRegisterClick}>
+            <Button onClick={() => {browserHistory.push('/register')}}>
               Register
             </Button>
           </span>
       </div>
     </div>
     );
-  }
-  handleLoginClick() {
-    browserHistory.push('/login');
-  }
-  handleRegisterClick() {
-    browserHistory.push('/register');
   }
 };

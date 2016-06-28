@@ -41,10 +41,10 @@ export default class Login extends React.Component {
           </span>
           <span style={{float: 'left'}} className="pull-left">
             <Button style={{marginRight: '10px'}}
-                    onClick={this.handleCancelClick}>
+                    onClick={() => {browserHistory.push('/')}}>
               Cancel
             </Button>
-            <Button onClick={this.handleRegisterClick}>
+            <Button onClick={() => {browserHistory.push('/register')}}>
               Register
             </Button>
           </span>
@@ -53,16 +53,8 @@ export default class Login extends React.Component {
     );
   }
 
-  handleCancelClick() {
-    browserHistory.push('/');
-  }
-
   handleLoginClick() {
     console.log("LOGIN");
-  }
-
-  handleRegisterClick() {
-    browserHistory.push('/register');
   }
 
 };

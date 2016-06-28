@@ -6,18 +6,16 @@ export default React.createClass({
     return (
       <div>
         <div id="welcome">
-          <a onClick={this.handleLoginClick}>Login</a>
+          <a onClick={() => {browserHistory.push('/login')}}>Login</a>
         </div>
         <div id="header_content">
-          <h1><a onClick={this.handleHomeClick}>MealPlanner</a></h1>
+          <h1>
+            <a onClick={() => { browserHistory.push('/planner')}}>
+              MealPlanner
+            </a>
+          </h1>
         </div>
       </div>
     );
-  },
-  handleHomeClick() {
-    browserHistory.push('/planner');
-  },
-  handleLoginClick() {
-    browserHistory.push('/login');
   }
 });
