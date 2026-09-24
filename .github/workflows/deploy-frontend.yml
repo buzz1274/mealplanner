@@ -1,0 +1,61 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    environment: production
+
+    permissions:
+      id-token: write
+      contents: read
+
+    env:
+      AWS_REGION: eu-west-2
+      FRONTEND_BUCKET: mealplanner-zz50-co-uk-frontend
+      CLOUDFRONT_DISTRIBUTION_ID: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Real AWS auth via OIDC — skipped entirely under act
+      - name: Configure AWS credentials (real)
+        if: ${{ !env.ACT }}
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      # Local/act auth — dummy credentials for LocalStack
+      - name: Configure AWS credentials (local)
+        if: ${{ env.ACT }}
+        run: |
+          echo "AWS_ACCESS_KEY_ID=test" >> "$GITHUB_ENV"
+          echo "AWS_SECRET_ACCESS_KEY=test" >> "$GITHUB_ENV"
+          echo "AWS_DEFAULT_REGION=${{ env.AWS_REGION }}" >> "$GITHUB_ENV"
+          echo "AWS_ENDPOINT_URL=http://host.docker.internal:4566" >> "$GITHUB_ENV"
+
+      - name: Sync frontend to S3
+        run: |
+          if [ "$ACT" = "true" ]; then
+            aws s3 sync . "s3://${FRONTEND_BUCKET}" \
+              --exclude "*" \
+              --include "index.html" \
+              --endpoint-url http://host.docker.internal:4566
+          else
+            aws s3 sync . "s3://${FRONTEND_BUCKET}" \
+              --exclude "*" \
+              --include "frontend/public/index.html"
+          fi
+
+      - name: Invalidate CloudFront cache
+        if: ${{ !env.ACT }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" \
+            --paths "/*"

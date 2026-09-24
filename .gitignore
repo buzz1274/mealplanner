@@ -1,3 +1,17 @@
+#intellij project files
+*.iml
+*.ipr
+*.iws
+
+# Operating system files
+.DS_Store
+
+# localstack
+.localstack/
+
+# python virtual env
+.venv
+
 # Local .terraform directories
 .terraform/
 
