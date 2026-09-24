@@ -46,9 +46,9 @@ jobs:
               --include "index.html" \
               --endpoint-url http://host.docker.internal:4566
           else
-            aws s3 sync . "s3://${FRONTEND_BUCKET}" \
+            aws s3 sync frontend/public "s3://${FRONTEND_BUCKET}" \
               --exclude "*" \
-              --include "frontend/public/index.html"
+              --include "index.html"
           fi
 
       - name: Invalidate CloudFront cache
