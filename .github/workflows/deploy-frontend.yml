@@ -23,6 +23,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Debug OIDC claims
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const token = await core.getIDToken('sts.amazonaws.com');
+            const payload = JSON.parse(
+              Buffer.from(token.split('.')[1], 'base64url').toString()
+            );
+            
+            console.log('sub:', payload.sub);
+            console.log('aud:', payload.aud);        
+
       # Real AWS auth via OIDC — skipped entirely under act
       - name: Configure AWS credentials (real)
         if: ${{ !env.ACT }}
